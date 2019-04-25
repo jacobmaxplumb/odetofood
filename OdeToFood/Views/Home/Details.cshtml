@@ -1,8 +1,14 @@
 ﻿@model OdeToFood.Models.Restaurant
 
-@{
-    ViewData["Title"] = "Details";
+@if (Model == null)
+{
+    <div>Not found</div>
+}
+else
+{
+    <h2>@Model.Name</h2>
+    <a asp-action="Index" asp-controller="Home">Back</a>
 }
 
-<h2>@Model.Name</h2>
+
 
